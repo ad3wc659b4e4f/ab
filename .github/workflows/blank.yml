@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Install ApacheBench (ab)
-        run: sudo apt-get update && sudo apt-get install -y apache2
+        run: sudo apt-get update > /dev/null && sudo apt-get install -y apache2 > /dev/null
 
       - name: Run Apache Benchmark Test
         run: |

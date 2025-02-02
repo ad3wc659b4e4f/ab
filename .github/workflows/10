@@ -1,0 +1,64 @@
+name: Run!
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Target URL for load testing"
+        required: true
+      repeat_times:
+        description: "Number of test iterations"
+        required: true
+        default: "5"
+
+jobs:
+  ab-test1:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test2:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test3:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test4:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test5:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test6:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test7:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test8:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test9:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test10:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}

@@ -10,6 +10,15 @@ on:
         description: "Number of test iterations"
         required: true
         default: "5"
+  workflow_call:
+    inputs:
+      target:
+        description: "Target URL for load testing"
+        required: true
+      repeat_times:
+        description: "Number of test iterations"
+        required: true
+        default: "5"
 
 jobs:
   ab-test:

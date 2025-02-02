@@ -1,4 +1,4 @@
-name: Run!
+name: 10
 
 on:
   workflow_dispatch:

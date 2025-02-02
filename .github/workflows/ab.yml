@@ -17,19 +17,17 @@ jobs:
 
     steps:
       - name: Install ApacheBench (ab)
-        run: sudo apt-get update > /dev/null && sudo apt-get install -y apache2 > /dev/null
+        run: sudo apt-get update && sudo apt-get install -y apache2
 
       - name: Run Apache Benchmark Test
         run: |
           echo "Starting ApacheBench test for target: ${{ github.event.inputs.target }}"
-          ab -n 100000 -c 500 "${{ github.event.inputs.target }}"
-      - name: Save Test Results
-        run: |
           for i in $(seq 1 ${{ github.event.inputs.repeat_times }}); do
             echo "Running iteration $i..."
             ab -n 100000 -c 500 "${{ github.event.inputs.target }}" >> result.txt
             echo "Iteration $i complete."
           done
+        continue-on-error: true  # 忽略该步骤的错误
       - name: Upload Test Results
         uses: actions/upload-artifact@v4
         with:

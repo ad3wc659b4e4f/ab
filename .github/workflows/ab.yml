@@ -24,7 +24,7 @@ jobs:
           echo "Starting ApacheBench test for target: ${{ github.event.inputs.target }}"
           for i in $(seq 1 ${{ github.event.inputs.repeat_times }}); do
             echo "Running iteration $i..."
-            ab -n 100000 -c 500 "${{ github.event.inputs.target }}" >> result.txt
+            ab -n 100000 -c 500 "${{ github.event.inputs.target }}" | tee result.txt || echo "Iteration $i failed, continuing..."
             echo "Iteration $i complete."
           done
         continue-on-error: true  # 忽略该步骤的错误

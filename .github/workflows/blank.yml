@@ -14,6 +14,4 @@ jobs:
         run: |
           sudo apt update
           sudo apt install apache2 -y
-      - name: Download file using wget
-        run: |
-          ab -n 100000 -c 1000 ${{ github.event.inputs.target }}
+          ab -n 100000 -c 500 ${{ github.event.inputs.target }}

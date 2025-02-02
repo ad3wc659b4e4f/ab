@@ -1,4 +1,4 @@
-name: 5
+name: 5 Apache Benchmark Test
 
 on:
   workflow_dispatch:

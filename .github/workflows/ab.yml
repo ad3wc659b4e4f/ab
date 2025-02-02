@@ -15,15 +15,17 @@ on:
       target:
         description: "Target URL for load testing"
         required: true
+        type: string
       repeat_times:
         description: "Number of test iterations"
         required: true
         default: "5"
+        type: string
 
 jobs:
   ab-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 60  # 增加超时时间
+    timeout-minutes: 60
 
     steps:
       - name: Install ApacheBench (ab)
@@ -37,4 +39,4 @@ jobs:
             ab -n 100000 -c 500 "${{ github.event.inputs.target }}" || echo "Iteration $i failed, continuing..."
             echo "Iteration $i complete."
           done
-        continue-on-error: true  # 忽略该步骤的错误
+        continue-on-error: true

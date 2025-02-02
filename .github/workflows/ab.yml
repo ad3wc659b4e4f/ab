@@ -14,6 +14,7 @@ on:
 jobs:
   ab-test:
     runs-on: ubuntu-latest
+    timeout-minutes: 60  # 增加超时时间
 
     steps:
       - name: Install ApacheBench (ab)

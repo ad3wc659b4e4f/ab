@@ -1,17 +1,37 @@
-name: Manual Dispatch Example
+name: Apache Benchmark Test
+
 on:
   workflow_dispatch:
     inputs:
       target:
-        description: "Focus on"
+        description: "Target URL for load testing"
         required: true
+      repeat_times:
+        description: "Number of test iterations"
+        required: true
+        default: "5"
 
 jobs:
-  build:
+  ab-test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Update and upgrade system packages
+      - name: Install ApacheBench (ab)
+        run: sudo apt-get update && sudo apt-get install -y apache2
+
+      - name: Run Apache Benchmark Test
         run: |
-          sudo apt update
-          sudo apt install apache2 -y
-          ab -n 100000 -c 500 ${{ github.event.inputs.target }}
+          echo "Starting ApacheBench test for target: ${{ github.event.inputs.target }}"
+          ab -n 100000 -c 500 "${{ github.event.inputs.target }}"
+      - name: Save Test Results
+        run: |
+          for i in $(seq 1 ${{ github.event.inputs.repeat_times }}); do
+            echo "Running iteration $i..."
+            ab -n 100000 -c 500 "${{ github.event.inputs.target }}" >> result.txt
+            echo "Iteration $i complete."
+          done
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: ab-results
+          path: result.txt

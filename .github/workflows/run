@@ -1,0 +1,19 @@
+name: Run!
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Target URL for load testing"
+        required: true
+      repeat_times:
+        description: "Number of test iterations"
+        required: true
+        default: "5"
+
+jobs:
+  ab-test:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}

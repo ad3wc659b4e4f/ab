@@ -29,7 +29,15 @@ jobs:
 
     steps:
       - name: Install ApacheBench (ab)
-        run: sudo apt-get update && sudo apt-get install -y apache2
+        run: |
+          sudo apt-get update && sudo apt-get install -y apache2
+          
+
+      - name: Check IP Address
+        run : |
+          curl 4.ipw.cn
+          curl 6.ipw.cn
+          curl test.ipw.cn
 
       - name: Run Apache Benchmark Test
         run: |

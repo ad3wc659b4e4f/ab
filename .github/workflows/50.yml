@@ -1,0 +1,264 @@
+name: 20 Apache Benchmark Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Target URL for load testing"
+        required: true
+      repeat_times:
+        description: "Number of test iterations"
+        required: true
+        default: "5"
+
+jobs:
+  ab-test1:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test2:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test3:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test4:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test5:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test6:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test7:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test8:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test9:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test10:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test11:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test12:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test13:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test14:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test15:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test16:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test17:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test18:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test19:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test20:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test21:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test22:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test23:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test24:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test25:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test26:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test27:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test28:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test29:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test30:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test31:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test32:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test33:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test34:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test35:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test36:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test37:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test38:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test39:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test40:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test41:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test42:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test43:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test44:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test45:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test46:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test47:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test48:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test49:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}
+  ab-test50:
+    uses: ./.github/workflows/ab.yml
+    with:
+      target: ${{ github.event.inputs.target }}
+      repeat_times: ${{ github.event.inputs.repeat_times }}

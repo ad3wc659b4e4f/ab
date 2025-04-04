@@ -1,4 +1,4 @@
-name: 20 Apache Benchmark Test
+name: 50 Apache Benchmark Test
 
 on:
   workflow_dispatch:

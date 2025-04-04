@@ -28,7 +28,7 @@ jobs:
     timeout-minutes: 60
 
     steps:
-      - name: Install ApacheBench (ab)
+      - name: Install ApacheBench
         run: |
           sudo apt-get update && sudo apt-get install -y apache2
 
